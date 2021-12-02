@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- CONFIGURACIÓN (ORACLE) -->
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE?createDataBaseIfNotExist=true</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
+		<property name="connection.username">system</property>
+		<property name="connection.password">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.show_sql">false</property>
+
+		<!-- MAPEOS -->
+		<mapping class="com.nttdata.persistence.Customer" />
+		<mapping class="com.nttdata.persistence.Contracts" />
+
+	</session-factory>
+</hibernate-configuration>
